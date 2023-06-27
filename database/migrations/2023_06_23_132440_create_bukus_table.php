@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('Penerbit')->nullable(false);
             $table->integer('Tahun_Terbit')->nullable(false);
             $table->integer('Jumlah_Stok')->nullable(false);
+            $table->string('cover');
+            $table->text('deskripsi');
             $table->unsignedBigInteger('NIK_Staff');
             $table->foreign('NIK_Staff')->references('NIK_Staff')->on('staffs');
         });

@@ -13,9 +13,9 @@ return new class extends Migration
     {
         Schema::create('edit_tata_masuks', function (Blueprint $table) {
             $table->id();
-            $table->string('Nama_Gambar');
-            $table->text('URL_Gambar');
-            $table->unsignedBigInteger('NIK_Admin');
+            $table->text('URL_gambar');
+            $table->timestamps();
+            $table->unsignedBigInteger('NIK_Admin')->nullable();
             $table->foreign('NIK_Admin')->references('NIK_Admin')->on('admins');
         });
     }

@@ -17,6 +17,7 @@ class Handler extends ExceptionHandler
         'password',
         'password_confirmation',
     ];
+    
 
     /**
      * Register the exception handling callbacks for the application.
@@ -25,6 +26,12 @@ class Handler extends ExceptionHandler
     {
         $this->reportable(function (Throwable $e) {
             //
+        });
+
+        $this->reportable(function (Throwable $e) {
+            if (app()->bound('sentry')) {
+                app('sentry')->captureException($e);
+            }
         });
     }
 }

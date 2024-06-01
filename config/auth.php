@@ -40,6 +40,11 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'admins',
+        ],
     ],
 
     /*
@@ -60,9 +65,27 @@ return [
     */
 
     'providers' => [
+        'penggunas' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\pengguna::class,
+            'table' => 'penggunas',
+        ],
+        'pengguna_dosens' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\pengguna_dosen::class,
+        ],
+        'staffs' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\staff::class,
+        ],
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Admin::class,
         ],
 
         // 'users' => [
@@ -91,12 +114,12 @@ return [
     */
 
     'passwords' => [
-        'users' => [
-            'provider' => 'users',
-            'table' => 'password_reset_tokens',
-            'expire' => 60,
-            'throttle' => 60,
-        ],
+        // 'users' => [
+        //     'provider' => 'users',
+        //     'table' => 'password_reset_tokens',
+        //     'expire' => 60,
+        //     'throttle' => 60,
+        // ],
     ],
 
     /*

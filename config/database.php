@@ -148,4 +148,22 @@ return [
 
     ],
 
+    'backup' => [
+        'name' => env('DB_BACKUP_NAME', 'default'),
+        'source' => [
+            'files' => [
+                'include' => [],
+                'exclude' => [],
+            ],
+            'databases' => [
+                'mysql',
+            ],
+        ],
+        'destination' => [
+            'disks' => [
+                'local',
+            ],
+        ],
+    ],    
+
 ];

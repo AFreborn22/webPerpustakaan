@@ -13,11 +13,15 @@ return new class extends Migration
     {
         Schema::create('transaksis', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('NIM');
-            $table->unsignedBigInteger('NIK_dosen');
+            $table->unsignedBigInteger('NIM')->nullable();
+            $table->string('Nama')->nullable();
+            $table->unsignedBigInteger('NIK_dosen')->nullable();
+            $table->string('nama_dosen')->nullable();
             $table->unsignedBigInteger('ISBN');
-            $table->timestamp('tanggal_pinjam');
-            $table->timestamp('tanggal_kembali')->nullable();
+            $table->string('Judul');
+            $table->date('tanggal_pinjam');
+            $table->date('tanggal_kembali');
+            $table->enum('status', ['Diproses','Dipinjam', 'Dikembalikan']);
             $table->timestamps();
 
             $table->foreign('NIM')->references('NIM')->on('penggunas')->onDelete('cascade');

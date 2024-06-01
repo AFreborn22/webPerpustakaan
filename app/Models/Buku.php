@@ -8,8 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Buku extends Model
 {
     use HasFactory;
-
-    protected $guarded = [ 'Username'];
+    protected $table = 'bukus';
+    protected $primaryKey = 'ISBN';
+    public $timestamps = false;
+    protected $guarded = [];
 
     public function transaksi()
     {

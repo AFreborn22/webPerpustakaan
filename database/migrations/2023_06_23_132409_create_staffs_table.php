@@ -17,8 +17,12 @@ return new class extends Migration
             $table->string('Username');
             $table->string('Password');
             
-            $table->unsignedBigInteger('NIK_Admin');
+            $table->unsignedBigInteger('NIK_Admin')->nullable();
             $table->foreign('NIK_Admin')->references('NIK_Admin')->on('admins');
+        });
+
+        Schema::table('staffs',function(Blueprint $table){
+            $table->string('Password',100)->change();
         });
     }
 
@@ -28,5 +32,8 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('staffs');
+        Schema::table('staffs',function(Blueprint $table){
+            $table->string('Password',60)->change();
+        });
     }
 };

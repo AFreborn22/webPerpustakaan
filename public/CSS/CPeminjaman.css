@@ -1,0 +1,161 @@
+:root {
+  --primary: #3A0561;
+  --color1: #A551E7;
+  --color2: #830BDF;
+  --color3: #462260;
+  --color4: #6708AE;
+  --color5: #D28727;
+  --color6: #f39419;
+  --coloropt: #fff;
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+/* navbar utama */
+.navbar-expand-lg {
+  background-color: var(--color4) !important;
+  border-bottom: 10px solid var(--color5);
+  z-index: 9999 !important;
+
+  .container-fluid {
+    color: #fff !important;
+    background-color: var(--color4) !important;
+
+    .navbar-toggler {
+      border: 0 !important;
+    }
+  }
+}
+
+.nav-link.active {
+  font-weight: 900 !important;
+  color: #fff !important;
+}
+
+.nav-link.active:hover {
+  color: #D28727 !important;
+}
+
+.btn-primary {
+  font-weight: 600 !important;
+  background-color: var(--color5) !important;
+  border: 0 !important;
+  border-radius: 20px !important;
+}
+
+.btn-primary:hover {
+  background-color: #ac6d1c !important;
+  border: 0 !important;
+  color: #5b0000 !important;
+}
+
+/* kata2 */
+.membaca {
+  text-align: center;
+  padding: 3rem;
+  margin: 2rem;
+}
+
+.membaca .yuk h2 {
+  font-size: xx-large;
+  font-weight: bold;
+  color: var(--color3);
+}
+
+.membaca .yuk h2 span {
+  color: var(--color5);
+}
+
+.membaca .yuk-baca {
+  padding-top: 0;
+  font-style: oblique;
+}
+
+.membaca .yuk-baca span {
+  font-weight: bold;
+  color: #D28727;
+}
+
+.membaca .yuk-baca span {
+  font-weight: bold;
+  color: #D28727;
+}
+
+.icon{
+  padding-left: 7rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff79;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.image{
+  text-align: center;
+  width: 400px;
+  height: 300px;
+}
+
+/* footer paling bawah */
+.f-bawah {
+  border-top: 10px solid var(--color5);
+  background-color: var(--color3);
+  color: #fff;
+  justify-content: center;
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 0.7rem;
+  margin-top: 180px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  height: auto;
+}
+
+.image-background{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://i.pinimg.com/564x/53/cd/e5/53cde5e121d81784e6bfca4115c0feb1.jpg");
+  opacity: 0.2;
+  z-index: -1;
+}
+
+/* media queries */
+
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* tablet */
+@media (max-width: 758px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+/* hp */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}

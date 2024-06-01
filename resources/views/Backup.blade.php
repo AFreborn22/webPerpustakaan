@@ -104,13 +104,37 @@
                           </svg> Data Transaksi
                     </div>
                     <!-- resources/views/backup.blade.php -->
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="panel">
+                                <header class="panel-heading">
+                                    <b>BackUp Database</b>
+                                </header>
+                                <div class="panel-body table-responsive">
+                                    <h3><b>Untuk menghindari hilangnya data, Backup Database PerPusWeb secara berkala.</b></h3>
+                                    <form method="post" action="{{ route('backup') }}">
+                                        @csrf
+                                        <div class="form-group">
+                                            <label for="tables">Daftar Tabel</label>
+                                            @foreach ($tables as $table)
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox" name="tables[]" value="{{ $table->Tables_in_perpustakaan_amikom }}">
+                                                        {{ $table->Tables_in_perpustakaan_amikom }}
+                                                    </label>
+                                                </div>
+                                            @endforeach
+                                        </div>
+                                        <button type="submit" class="buttonB" onclick="backupData()">Backup Data</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                <button class="buttonB" onclick="backupData()">Backup Data</button>
+                    <a href="#" class="buttonB" onclick="backupData()">Backup Data</a>
 
                     
-                    
-
-                  </form>
             </div>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
             <script src="JS/Setting.js"></script>

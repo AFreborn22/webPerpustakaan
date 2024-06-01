@@ -8,17 +8,28 @@ use Illuminate\Database\Eloquent\Model;
 class transaksi extends Model
 {
     use HasFactory;
+    protected $table = 'transaksis';
+    protected $primaryKey = 'id';
+    protected $guarded = [];
 
-    protected $guarded = ['ID_Transaksi', 'ID_Buku'];
+    public function mahasiswa()
+    {
+        return $this->belongsTo(pengguna::class, 'NIM', 'NIM');
+    }
 
+    public function dosen()
+    {
+        return $this->belongsTo(pengguna_dosen::class, 'NIK_dosen', 'NIK_dosen');
+    }
+    
     public function pengguna()
     {
-        return $this->belongsTo(Pengguna::class);
+        return $this->belongsTo(pengguna::class);
     }
 
     public function penggunaDosen()
     {
-        return $this->belongsTo(Pengguna_dosen::class);
+        return $this->belongsTo(pengguna_dosen::class);
     }
 
     public function buku()
@@ -30,7 +41,11 @@ class transaksi extends Model
     {
         return $this->hasMany(Riwayat::class);
     }
-
+    public function user()
+{
+    return $this->belongsTo(User::class, 'NIM', 'NIM');
+    return $this->belongsTo(User::class, 'NIK_dosen', 'NIK_dosen');
+}
 
 
 }

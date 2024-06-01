@@ -2,12 +2,22 @@
 
 namespace App\Models;
 
+use Illuminate\Auth\Authenticatable as AuthenticatableTrait;
+use Illuminate\Contracts\Auth\Authenticatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class staff extends Model
+class staff extends Model implements Authenticatable
 {
-    use HasFactory;
+    use HasFactory, AuthenticatableTrait;
+    protected $table = 'staffs';
+    protected $primaryKey = 'NIK_Staff';
+    public $timestamps = false;
+    protected $guarded = [];
+    protected $hidden = [
+        'Password',
+        'remember_token',
+    ];
 
     public function admin()
     {

@@ -1,0 +1,120 @@
+@media (max-width: 600px) {
+    .container {
+      max-width: 100%;
+      margin-top: 50px;
+    }
+  }
+  *{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://i.pinimg.com/564x/53/cd/e5/53cde5e121d81784e6bfca4115c0feb1.jpg");
+  opacity: 0.2;
+  z-index:-1;
+}
+
+.profile-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+  }
+  
+  .profile-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-container2 {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+  }
+  
+  .profile-container2 h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+   text-align: center;
+   
+  }
+  
+  .form-group label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="password"],
+  .form-group input[type="email"] {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+ 
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .save-button,
+  .cancel-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .save-button {
+    background-color: #4caf50;
+  }
+
+  .save-button:hover{
+    background-color: #339b36;
+  }
+  
+.cancel-button {
+    background-color: #f44336;
+}
+  
+.cancel-button:hover{
+    background-color: #c8362b;
+}
+
+.file-input {
+  display: inline-block;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+#preview img {
+  width: 300px; /* Ubah sesuai kebutuhan */
+  height: 400px; /* Ubah sesuai kebutuhan */
+  margin-top: 20px;
+  object-fit: cover;
+}

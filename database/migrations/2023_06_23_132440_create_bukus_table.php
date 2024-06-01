@@ -20,7 +20,7 @@ return new class extends Migration
             $table->integer('Jumlah_Stok')->nullable(false);
             $table->string('cover');
             $table->text('deskripsi');
-            $table->unsignedBigInteger('NIK_Staff');
+            $table->unsignedBigInteger('NIK_Staff')->nullable();
             $table->foreign('NIK_Staff')->references('NIK_Staff')->on('staffs');
         });
     }

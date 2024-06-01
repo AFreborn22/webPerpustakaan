@@ -9,7 +9,10 @@ class skripsi extends Model
 {
     use HasFactory;
 
-    protected $guarded = ['id_skripsi'];
+    protected $table = 'skripsis';
+    protected $primaryKey = 'id';
+    public $timestamps = false;
+    protected $guarded = [];
 
     public function staff()
     {

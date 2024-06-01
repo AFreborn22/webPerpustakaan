@@ -10,43 +10,43 @@
 <div class='carousel'>
   <div class='carousel__item'>
     <div class='carousel__item-body'>
-      <img src="Login Page.svg" alt="">
+      <img src="/ASSETS/Login Page.svg" alt="">
       <p>LOGIN</p>
     </div>
   </div>
   <div class='carousel__item'>
     <div class='carousel__item-body'>
-      <img src="Sign Up.svg" alt="">
+      <img src="/ASSETS/Sign Up.svg" alt="">
       <p>SIGN UP</p>
     </div>
   </div>
   <div class='carousel__item'>
     <div class='carousel__item-body'>
-     <img src="HOME USER.svg" alt="">
+     <img src="/ASSETS/HOME USER.svg" alt="">
      <p>HOME USER</p>
     </div>
   </div>
   <div class='carousel__item'>
     <div class='carousel__item-body'>
-      <img src="Data Buku.svg" alt="">
+      <img src="/ASSETS/Data Buku.svg" alt="">
       <p>DATA BUKU</p>
     </div>
   </div>
   <div class='carousel__item'>
     <div class='carousel__item-body'>
-      <img src="Detail Buku.svg" alt="">
+      <img src="/ASSETS/Detail Buku.svg" alt="">
       <p>DETAIL BUKU</p>
     </div>
   </div>
   <div class='carousel__item'>
     <div class='carousel__item-body'>
-      <img src="PINJAM BUKU.svg" alt="">
+      <img src="/ASSETS/PINJAM BUKU.svg" alt="">
       <p>PINJAM BUKU</p>
     </div>
   </div>
   <div class='carousel__item'>
     <div class='carousel__item-body'>
-      <img src="Riwayat Transaksi.svg" alt="">
+      <img src="/ASSETS/Riwayat Transaksi.svg" alt="">
       <p>RIWAYAT TRANSAKSI</p>
     </div>
   </div>

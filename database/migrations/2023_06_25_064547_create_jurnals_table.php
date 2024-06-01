@@ -16,8 +16,9 @@ return new class extends Migration
             $table->string('judul');
             $table->string('penulis');
             $table->string('tahun_terbit');
+            $table->string('cover');
 
-            $table->unsignedBigInteger('NIK_Staff');
+            $table->unsignedBigInteger('NIK_Staff')->nullable();
             $table->foreign('NIK_Staff')->references('NIK_Staff')->on('staffs');
         });
     }
